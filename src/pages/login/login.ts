@@ -42,23 +42,22 @@ export class LoginPage {
 
     // Here we will check if the user is already logged in because we don't want to ask users to log in each time they open the app
     let env = this;
-    env.nav.setRoot(env.main_page.component);
+    //env.nav.setRoot(env.main_page.component);
 
-    // this.facebookLoginService.getFacebookUser()
-    // .then(function(data) {
-    //    // user is previously logged with FB and we have his data we will let him access the app
-    //   env.nav.setRoot(env.main_page.component);
-    // }, function(error){
-    //   console.log("facebook login error");
-    //   //we don't have the user data so we will ask him to log in
-    //   env.facebookLoginService.doFacebookLogin()
-    //   .then(function(res){
-    //     env.loading.dismiss();
-    //     env.nav.setRoot(env.main_page.component);
-    //   }, function(err){
-    //     console.log("Facebook Login error", err);
-    //   });
-    // });
+    this.facebookLoginService.getFacebookUser()
+    .then(function(data) {
+       // user is previously logged with FB and we have his data we will let him access the app
+      env.nav.setRoot(env.main_page.component);
+    }, function(error){
+      //we don't have the user data so we will ask him to log in
+      env.facebookLoginService.doFacebookLogin()
+      .then(function(res){
+        env.loading.dismiss();
+        env.nav.setRoot(env.main_page.component);
+      }, function(err){
+        console.log("Facebook Login error", err);
+      });
+    });
   }
 
   doGoogleLogin() {

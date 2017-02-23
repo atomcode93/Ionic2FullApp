@@ -51,7 +51,6 @@ export class FacebookLoginService {
 
   getFacebookUser()
   {
-    console.log("getting facebook user");
     return NativeStorage.getItem('facebook_user');
   }
 
