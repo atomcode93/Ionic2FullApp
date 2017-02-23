@@ -1,0 +1,54 @@
+<ion-header class="facebook-header">
+  <ion-navbar>
+    <ion-title>Facebook</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="facebook-integration-content" [ngClass]="{connected: user.userId}">
+  <div *ngIf="!user.userId">
+    <h1 class="no-connection-message">You haven't linked your Facebook account yet.</h1>
+    <ion-row *ngIf="!user.userId" class="actions-row facebook-connect-row">
+      <ion-col no-padding width-100>
+        <button ion-button block class="auth-action-button facebook-auth-button" (click)="doFacebookLogin()">Connect with Facebook</button>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <ion-card class="facebook-card" *ngIf="user.userId">
+    <background-image class="user-image-heading" [src]="user.image">
+      <ion-row class="heading-row">
+        <ion-col no-padding width-72 class="user-details-col">
+          <h2 class="user-name">{{user.name}}</h2>
+        </ion-col>
+        <ion-col no-padding width-28 class="user-details-col">
+          <ion-icon *ngIf="(user.gender | lowercase) == 'female'" class="user-gender-icon" name="female"></ion-icon>
+          <ion-icon *ngIf="(user.gender | lowercase) == 'male'" class="user-gender-icon" name="male"></ion-icon>
+          <span class="user-gender">{{user.gender}}</span>
+        </ion-col>
+      </ion-row>
+    </background-image>
+    <h3 class="divider-heading">Friends</h3>
+    <ion-row class="friends-row">
+      <ion-col no-padding class="friend-col" *ngFor="let friend_image of user.friends">
+        <preload-image class="rounded-image" [ratio]="{w:1, h:1}" [src]="friend_image" alt="facebook friend" title="facebook friend"></preload-image>
+      </ion-col>
+      <ion-col no-padding class="friend-col">
+        <h3 class="more-friends">22</h3>
+      </ion-col>
+    </ion-row>
+    <h3 class="divider-heading">Photos</h3>
+    <ion-row class="photos-row" wrap>
+      <ion-col no-padding width-25 class="photo-col" *ngFor="let photo of user.photos; let i = index">
+        <preload-image [ratio]="{w:1, h:1}" [src]="photo" alt="facebook photo" title="facebook photo"></preload-image>
+        <div *ngIf="i == (user.photos.length -1)" class="has-more-images">
+          <h3 class="images-count">107</h3>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="actions-row">
+      <ion-col no-padding width-100>
+        <button ion-button block class="auth-action-button logout-button" (click)="doFacebookLogout()">Log out</button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

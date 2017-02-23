@@ -1,0 +1,20 @@
+feed-page {
+	.feed-content
+	{
+		background-color: color($colors, background, base);
+
+		.feed-item
+		{
+			@include basic-card-styles($white-d);
+
+			.item-title
+			{
+				margin: 0px;
+				margin-bottom: 12px;
+				padding: 0px;
+				letter-spacing: 1.1px;
+				color: $theme-color-2;
+			}
+		}
+	}
+}

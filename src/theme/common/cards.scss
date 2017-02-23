@@ -1,0 +1,41 @@
+// These card styles are for the feed and profile views
+@mixin basic-card-styles($text-color){
+	ion-card {
+		border-radius: 6px;
+		@include element-shadow();
+	}
+
+	.item-text
+	{
+		line-height: 1.6;
+		color: $text-color;
+		margin: 0px;
+	}
+
+	.actions-row
+	{
+		padding: 0px 16px 14px;
+
+		.action-button
+		{
+			padding: 0px;
+			margin: 0px;
+			color: $text-color;
+
+			.button-inner
+			{
+				font-size: 1.2rem;
+			}
+
+			ion-icon {
+				font-size: 2.0em;
+
+				&[ng-reflect-is-active="true"],
+				&.ion-ios-heart
+				{
+					color: color($colors, danger);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,165 @@
+profile-page {
+	.profile-content
+	{
+		background-color: color($colors, background, base);
+
+		.user-details
+		{
+			@include element-shadow();
+			padding-bottom: 4%;
+			background-color: $white;
+
+			.user-main-data-row
+			{
+				padding: 4% 4% 0px;
+				@include align-items(center);
+
+				.user-image
+				{
+					border-radius: 50%;
+				}
+
+				.social-presence-row
+				{
+					padding: 0px 0px 5px 10px;
+				}
+
+				.profile-action-row
+				{
+					padding: 5px 0px 0px 10px;
+
+					.button
+					{
+						margin: 0px;
+						border-radius: 6px;
+						background-color: color($colors, button-alt, base);
+						color: color($colors, button-alt, contrast);
+						font-weight: 500;
+					}
+				}
+
+				.social-presence-item
+				{
+					text-align: center;
+					padding: 0px 5px;
+
+					&:first-child
+					{
+						padding-left: 10%;
+					}
+					&:last-child
+					{
+						padding-right: 10%;
+					}
+
+					a {
+						display: block;
+						color: $white-d;
+					}
+
+					.social-presence-value
+					{
+						margin: 0px;
+						font-size: 2.2rem;
+					}
+
+					.social-presence-title
+					{
+						margin: 0px;
+						font-size: 1.2rem;
+						font-weight: 400;
+						line-height: 1.1;
+						letter-spacing: 0.2px;
+					}
+				}
+			}
+
+			.user-bio-row
+			{
+				padding: 4%;
+
+				.user-name
+				{
+					font-size: 1.6rem;
+					font-weight: 500;
+					letter-spacing: 0.2px;
+					color: $theme-color-1;
+					margin: 0px;
+				}
+
+				.user-location
+				{
+					font-size: 1.2rem;
+					font-weight: 500;
+					letter-spacing: 0.2px;
+					color: $white-d;
+					display: block;
+				  text-align: right;
+				  line-height: 1.6;
+				}
+
+				.user-description
+				{
+					font-size: 1.2rem;
+					line-height: 1.6;
+					letter-spacing: 0.2px;
+					color: $white-d;
+					margin: 10px 0px 0px;
+				}
+			}
+		}
+
+		.user-content-segment
+		{
+			@include segment-button-styles($theme-color-2);
+
+			.segment-button
+			{
+				@include segment-text-styles($white-d);
+			}
+		}
+
+		.user-content
+		{
+			.list-view
+			{
+				.list-item
+				{
+					@include basic-card-styles($white-d);
+
+					padding: 12px 0px;
+
+					ion-card {
+						margin-top: 0px;
+						margin-bottom: 0px;
+					}
+
+					.item-date
+					{
+						font-size: 1.4rem;
+						font-weight: 500;
+						color: $white-d;
+						margin: 0px 18px 4px;
+						display: block;
+					}
+				}
+			}
+
+			.grid-view
+			{
+				padding: 8px 0px 2px;
+
+				.grid-row
+				{
+					padding: 0px 5px;
+
+					.grid-item
+					{
+						padding: 0px 3px 6px;
+					}
+				}
+
+			}
+		}
+	}
+}

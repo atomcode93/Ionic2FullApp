@@ -1,0 +1,48 @@
+{
+    "today":[
+      {
+        "name": "Martin",
+        "image": "./assets/images/notifications/100x100Notification1.jpeg",
+        "message": "Adam liked your photo",
+        "date": "5:03 pm"
+      },
+      {
+        "name": "Jessica",
+        "image": "./assets/images/notifications/100x100Notification2.png",
+        "message": "Justin invited you to the event Bday Party",
+        "date": "2:54 pm"
+      },
+      {
+        "name": "Phillip",
+        "image": "./assets/images/notifications/100x100Notification3.jpg",
+        "message": "Alessia wrote on your timeline",
+        "date": "1:54 pm"
+      }
+    ],
+    "yesterday":[
+      {
+        "name": "George",
+        "image": "./assets/images/notifications/100x100Notification4.jpeg",
+        "message": "Helen mentioned you in a comment",
+        "date": "9:11 pm"
+      },
+      {
+        "name": "Kirsten",
+        "image": "./assets/images/notifications/100x100Notification5.jpg",
+        "message": "Ryan commented on your video",
+        "date": "3:09 pm"
+      },
+      {
+        "name": "Judith",
+        "image": "./assets/images/notifications/100x100Notification6.jpg",
+        "message": "Don recently likes the photo you’re tagged in",
+        "date": "11:34 am"
+      },
+      {
+        "name": "Diane",
+        "image": "./assets/images/notifications/100x100Notification7.jpg",
+        "message": "Giselle and Christian liked your status update",
+        "date": "7:12 am"
+      }
+  ]
+}

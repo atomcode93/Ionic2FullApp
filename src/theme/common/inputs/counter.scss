@@ -1,0 +1,81 @@
+@mixin counter-item-styles($text-color, $value-color, $background){
+	.counter-item
+	{
+		padding: 0px;
+		border: none !important;
+		@include element-shadow();
+
+		.item-inner
+		{
+			padding: 0px;
+			border: none;
+
+			ion-label {
+				margin: 0px;
+				@include display(flex);
+				@include justify-content(space-between);
+			}
+
+			.counter-label
+			{
+				margin: 15px;
+				font-size: 1.4rem;
+				font-weight: 500;
+				letter-spacing: 0.2px;
+				color: $text-color;
+				flex: 1;
+			}
+
+			.counter-value
+			{
+				margin: 15px 5px;
+				font-size: 1.6rem;
+				font-weight: 500;
+				text-align: center;
+				color: $value-color;
+			}
+
+			counter-input {
+				flex: 1;
+				text-align: right;
+				padding-right: 15px;
+				@include display(flex);
+				@include align-items(center);
+				@include justify-content(flex-end);
+
+				.counter-icon
+				{
+					margin: 0px;
+					border-radius: 50%;
+					border: 1px solid $value-color;
+					background-color: $background;
+					color: $value-color;
+					width: 34px;
+					height: 34px;
+
+					ion-icon {
+						color: $value-color;
+					}
+				}
+
+				&[basic]
+				{
+					.counter-icon
+					{
+						width: initial;
+						border-radius: 12px;
+						height: 30px;
+					}
+				}
+
+				.counter-inner
+				{
+					font-size: 1.8rem;
+					text-align: center;
+					color: $value-color;
+					margin: 0px 12px;
+				}
+			}
+		}
+	}
+}

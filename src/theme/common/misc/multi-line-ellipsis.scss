@@ -1,0 +1,33 @@
+@mixin multi-line-ellipsis($font-size:12px){
+	overflow: hidden;
+	position: relative;
+	white-space: normal;
+	word-break: break-all;
+	font-size: $font-size;
+	line-height: ($font-size + 4px);
+	// Default
+	height: ($font-size + 4px)*4;
+
+	&[rows="2"]
+	{
+		height: ($font-size + 4px)*2;
+	}
+	&[rows="3"]
+	{
+		height: ($font-size + 4px)*3;
+	}
+	&[rows="4"]
+	{
+		height: ($font-size + 4px)*4;
+	}
+
+	&::after
+	{
+		content: '...';
+		position: absolute;
+		bottom: 0px;
+		right: 0px;
+		padding-left: 10px;
+		@include background-image(linear-gradient(left,  rgba($white, 0) 0%,rgba($white, 1) 40%));
+	}
+}

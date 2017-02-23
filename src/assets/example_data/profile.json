@@ -1,0 +1,151 @@
+{
+    "user": {
+        "name": "LeBron James",
+        "location": "Ohio, USA",
+        "about": "Philosophy is considered a science but it is difficult to say, when one has to compare with an ordinary science, for example biology, or chemistry.",
+        "email": "contact@ionicthemes.com",
+        "phone": "555-555-555",
+        "image": "./assets/images/profile/200x200ProfilePic.png",
+        "website": "https://ionicthemes.com"
+    },
+    "following": [
+        {
+            "name": "Luis Suarez",
+            "image": "./assets/images/profile/200x200suarez.png",
+            "about": "Luis Alberto Suárez Díaz (born 24 January 1987) is a Uruguayan professional footballer who plays as a striker for Spanish club FC Barcelona and the Uruguay national team.",
+            "inverse_relation": true
+        },
+        {
+            "name": "Rafael Nadal",
+            "image": "./assets/images/profile/200x200nadal.png",
+            "about": "Rafael Nadal Parera (born 3 June 1986) is a Spanish professional tennis player currently ranked world No. 8.",
+            "inverse_relation": true
+        },
+        {
+            "name": "Manny Pacquiao",
+            "image": "./assets/images/profile/200x200manny.png",
+            "about": "Emmanuel Dapidran Pacquiao (born December 17, 1978) is a Filipino professional boxer and politician, currently serving as Senator of the Philippines.",
+            "inverse_relation": false
+        },
+        {
+            "name": "Serena Williams",
+            "image": "./assets/images/profile/200x200serena.png",
+            "about": "Serena Jameka Williams (born September 26, 1981) is an American professional tennis player. The Women's Tennis Association (WTA) has ranked her world No.1 in singles on six separate occasions.",
+            "inverse_relation": true
+        },
+        {
+            "name": "Michael Jordan",
+            "image": "./assets/images/profile/200x200jordan.png",
+            "about": "Michael Jeffrey Jordan (born February 17, 1963) is an American retired professional basketball player. Jordan played 15 seasons in the NBA for the Chicago Bulls and Washington Wizards.",
+            "inverse_relation": false
+        },
+        {
+            "name": "Novak Djokovic",
+            "image": "./assets/images/profile/200x200novak.png",
+            "about": "Novak Djokovic (born 22 May 1987) is a Serbian professional tennis player who is currently ranked world No. 2 in men's singles tennis by the Association of Tennis Professionals (ATP).",
+            "inverse_relation": false
+        }
+    ],
+    "followers": [
+          {
+            "name": "Dwyane Wade",
+            "image": "./assets/images/profile/200x200wade.png",
+            "about": "Dwyane Tyrone Wade Jr. (born January 17, 1982) is an American professional basketball player for the Chicago Bulls of the National Basketball Association(NBA)",
+            "inverse_relation": true
+        },
+        {
+            "name": "Lionel Messi",
+            "image": "./assets/images/profile/200x200messi.png",
+            "about": "Lionel Andrés Messi (born 24 June 1987) is an Argentine professional footballer who plays as a forward for Spanish club FC Barcelona and the Argentina national team.",
+            "inverse_relation": false
+        },
+        {
+            "name": "Kobe Bryant",
+            "image": "./assets/images/profile/200x200kobe.png",
+            "about": "Kobe Bean Bryant (born August 23, 1978) is an American retired professional basketball player and businessman. He played his entire 20-year career with the Los Angeles Lakers of the National Basketball Association (NBA)",
+            "inverse_relation": false
+        },
+        {
+            "name": "Cristiano Ronaldo",
+            "image": "./assets/images/profile/200x200ronaldo.png",
+            "about": "Cristiano Ronaldo dos Santos Aveiro (born 5 February 1985) is a Portuguese professional footballer who plays for Spanish club Real Madrid and the Portugal national team.",
+            "inverse_relation": true
+        },
+        {
+            "name": "Neymar Jr.",
+            "image": "./assets/images/profile/200x200neymar.png",
+            "about": "Neymar da Silva Santos Júnior (born 5 February 1992), commonly known as Neymar or Neymar Jr., is a Brazilian professional footballer who plays as a forward for Spanish club FC Barcelona and the Brazil national team.",
+            "inverse_relation": false
+        },
+        {
+            "name": "Maria Sharapova",
+            "image": "./assets/images/profile/200x200maria.png",
+            "about": "Maria Yuryevna Sharapova (born April 19, 1987) is a Russian professional tennis player. A United States resident since 1994, Sharapova has competed on the WTA tour since 2001.",
+            "inverse_relation": false
+        },
+        {
+            "name": "Manu Ginóbili",
+            "image": "./assets/images/profile/200x200manu.png",
+            "about": "Emanuel David Ginóbili Maccari (born 28 July 1977) is an Argentine professional basketball player for the San Antonio Spurs of the National Basketball Association (NBA).",
+            "inverse_relation": true
+        }
+    ],
+    "posts":[
+      {
+        "image": "./assets/images/profile/posts/500x500profile1.png",
+        "description": "Did you know I play the violin? Classical music always helps me wind down after a game. #violin #cavaliers #nba",
+        "likes": 52,
+        "comments": 5,
+        "liked": true,
+        "date": "17/11/2016"
+      },
+      {
+        "image": "./assets/images/profile/posts/500x500profile2.jpg",
+        "description": "#Sushi #Night with my friend @kobebryant",
+        "likes": 11,
+        "comments": 3,
+        "liked": false,
+        "date": "14/11/2016"
+      },
+      {
+        "image": "./assets/images/profile/posts/500x500profile3.jpg",
+        "description": "Thank you @BarackObama for introducing me at the #WhiteHouseParty",
+        "likes": 221,
+        "comments": 11,
+        "liked": true,
+        "date": "10/10/2016"
+      },
+      {
+        "image": "./assets/images/profile/posts/500x500profile4.jpg",
+        "description": "#SquadGoals @dwyanewade @justintimberlake",
+        "likes": 20,
+        "comments": 1,
+        "liked": false,
+        "date": "02/10/2016"
+      },
+      {
+        "image": "./assets/images/profile/posts/500x500profile5.jpg",
+        "description": "It’s game night with the #Cavaliers ! #StriveForGreatness",
+        "likes": 99,
+        "comments": 101,
+        "liked": true,
+        "date": "22/9/2016"
+      },
+      {
+        "image": "./assets/images/profile/posts/500x500profile6.jpg",
+        "description": "Congratulations @luissuarez @neymarjr @lionelmessi for the big #Barca WIN! ",
+        "likes": 32,
+        "comments": 7,
+        "liked": false,
+        "date": "10/9/2016"
+      },
+      {
+        "image": "./assets/images/profile/posts/500x500profile7.jpg",
+        "description": "I want to fly like an eagle, To the sea Fly like an eagle, Let my spirit carry me I want to fly, Fly right into the future ",
+        "likes": 10,
+        "comments": 9,
+        "liked": false,
+        "date": "9/9/2016"
+      }
+    ]
+}

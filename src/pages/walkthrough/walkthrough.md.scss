@@ -1,0 +1,25 @@
+ion-app.md {
+	walkthrough-page {
+		.walkthrough-header
+		{
+			&::after
+			{
+				background: none;
+			}
+		}
+
+		.walkthrough-content
+		{
+			.button-bar
+			{
+				background: $white;
+  			border-radius: 6px;
+
+				& > .button
+				{
+					box-shadow: none;
+				}
+			}
+		}
+	}
+}

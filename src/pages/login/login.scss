@@ -1,0 +1,35 @@
+login-page {
+	.login-content
+	{
+		.alt-options
+		{
+			.button
+			{
+				margin: 0px;
+				padding: 0px;
+				font-size: 1.4rem;
+			}
+
+			.forgot-button
+			{
+				color: $white-d;
+
+				.button-inner
+				{
+					@include justify-content(flex-start);
+				}
+			}
+
+			.signup-button
+			{
+				font-weight: 500;
+				color: $theme-color-2;
+
+				.button-inner
+				{
+					@include justify-content(flex-end);
+				}
+			}
+		}
+	}
+}

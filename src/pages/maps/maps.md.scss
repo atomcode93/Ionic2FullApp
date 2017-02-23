@@ -1,0 +1,26 @@
+ion-app.md {
+	maps-page {
+		.search-container
+    {
+      .search-toolbar
+      {
+				.bar-buttons
+				{
+					.geolocation-button
+					{
+						margin-left: 0px;
+						margin-right: -4px;
+					}
+				}
+			}
+		}
+
+		ion-searchbar {
+			.searchbar-input
+			{
+				border-radius: 2.1rem !important;
+			}
+		}
+	}
+
+}

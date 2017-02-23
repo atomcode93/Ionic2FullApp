@@ -1,0 +1,282 @@
+maps-page {
+  $map-height: 100%;
+  $nearby-places-height: 35%;
+
+  .map-row
+  {
+    height: $map-height;
+    margin: 0px !important;
+
+    .map-col
+    {
+      position: relative;
+    }
+
+    .search-container
+    {
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      z-index: 4;
+
+      .search-toolbar
+      {
+        padding: 0px 10px;
+
+        .toolbar-background
+        {
+          background: color($colors, background, base);
+          border: none;
+          @include element-shadow();
+        }
+
+        &.transparent-background
+        {
+          .toolbar-background
+          {
+            background: transparent;
+            box-shadow: none;
+          }
+
+          ion-searchbar.search-places-bar
+          {
+      			.searchbar-input
+      			{
+      				background-color: $white;
+      			}
+          }
+        }
+
+        .bar-buttons
+        {
+          margin: 0px;
+
+          .geolocation-button
+          {
+            color: $black-d;
+            margin-left: -3px;
+
+            &.using-geolocation
+            {
+              color: $theme-color-1;
+            }
+          }
+        }
+
+        ion-searchbar.search-places-bar
+        {
+    			background: transparent;
+    			padding: 10px 0px;
+          padding-left: 5px;
+    			border: none;
+
+    			.searchbar-input
+    			{
+    				border-radius: 1.5rem;
+    				color: $theme-color-2;
+    				background-color: $white-c;
+    			}
+
+    			.searchbar-search-icon {
+    			  @include ios-searchbar-icon($searchbar-ios-input-search-icon-svg, $theme-color-2);
+    			}
+    		}
+      }
+
+      .search-results
+      {
+        padding: 10px;
+        padding-top: 0px;
+      }
+    }
+
+    .map-container
+    {
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+
+      google-map {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .nearby-places-container
+    {
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      z-index: 4;
+      height: $nearby-places-height;
+      margin: 0px 0px 24px;
+
+      .scroll-zoom-wrapper
+      {
+        height: 100%;
+
+        .nearby-places-row
+        {
+          height: 100%;
+        }
+      }
+
+      .place-item-outer
+      {
+        height: 100%;
+        
+        .place-card
+        {
+          border-radius: 6px;
+          margin: 0px;
+          padding: 0px;
+          width: 100%;
+          height: 100%;
+          background: #FFF;
+          opacity: 0.75;
+        }
+
+        &.selected-place .place-card
+        {
+          opacity: 1;
+        }
+
+        .place-image-heading
+        {
+          height: 50%;
+
+          .bg-overlay
+    			{
+    				z-index: 1;
+    				background-color: rgba($black-c, .6);
+    			}
+
+    			ion-spinner {
+    				z-index: 2;
+    			}
+
+    			@include spinner-color($white);
+
+    			.heading-row
+    			{
+    				height: 100%;
+    				z-index: 3;
+      			position: absolute;
+    				@include align-items(flex-end);
+
+    				.place-title
+    				{
+              display: inline-block;
+            	width: 100%;
+            	text-align: left;
+            	font-size: 5vw;
+            	font-weight: 900;
+            	letter-spacing: 0.4px;
+            	color: $white;
+            	margin: 0px;
+              padding: 9px;
+    				}
+    			}
+        }
+
+        .place-details-container
+        {
+          padding: 5px 9px 9px;
+
+          .details-row
+          {
+            margin-bottom: 6px;
+          }
+
+          .opening-hours
+          {
+            font-size: 1.0rem;
+            font-weight: 500;
+            text-transform: uppercase;
+
+            &.opened
+            {
+              color: $theme-color-1;
+            }
+
+            &.closed
+            {
+              color: $theme-color-3;
+            }
+          }
+
+          .place-rating
+          {
+            @include rating-item-styles($white-d, $theme-color-1);
+
+            .rating-item
+            {
+              box-shadow: none;
+              background: transparent;
+              margin: 2px 0px;
+              min-height: 0px;
+
+              rating {
+                padding: 0px !important;
+
+                .rating-icon {
+                  padding: 0px 1px;
+                  height: auto;
+
+                  ion-icon {
+                    font-size: 0.9em !important;
+                  }
+                }
+              }
+            }
+          }
+
+          .details-list
+          {
+            ion-item {
+              background: transparent;
+              padding: 0px;
+
+              ion-avatar {
+                margin: 5px 10px 5px 0px;
+                min-width: 0px;
+                min-height: 0px;
+                width: 10%;
+                text-align: center;
+
+                ion-icon {
+                  font-size: 1.4em;
+                  color: $white-d;
+                }
+              }
+
+              .item-inner
+              {
+                padding: 0px;
+
+                ion-label {
+                  margin: 0px;
+                  overflow: visible;
+                  white-space: normal;
+                }
+              }
+            }
+
+            .place-location
+            {
+              .location-text
+              {
+                color: $white-d;
+                font-size: 1.2rem;
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+ion-app.wp {
+	tabs-navigation {
+		.tabbar
+		{
+			.tab-button[aria-selected=true]
+			{
+				border-bottom-color: $theme-color-1;
+			}
+		}
+	}
+}

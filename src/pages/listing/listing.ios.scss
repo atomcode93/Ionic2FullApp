@@ -1,0 +1,30 @@
+ion-app.ios {
+	listing-page {
+		
+		.listing-header
+		{
+			.header-logo
+			{
+				width: 34vw;
+				margin: 0px auto;
+			}
+		}
+
+		.grid-categories
+		{
+			.category-item
+			{
+				.category-heading
+				{
+					.heading-row
+					{
+						.category-title
+						{
+							font-size: 7vw;
+						}
+					}
+				}
+			}
+		}
+	}
+}

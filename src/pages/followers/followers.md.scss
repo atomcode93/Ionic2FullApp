@@ -1,0 +1,21 @@
+ion-app.md {
+	followers-page {
+		ion-searchbar {
+			.searchbar-input
+			{
+				border-radius: 2.1rem;
+			}
+		}
+
+		.relation-button
+		{
+			&.following
+			{
+				ion-icon {
+					font-size: 3.0em !important;
+				}
+			}
+		}
+	}
+
+}

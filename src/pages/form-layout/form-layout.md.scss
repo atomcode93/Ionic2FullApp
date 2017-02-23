@@ -1,0 +1,36 @@
+ion-app.md {
+	form-layout-page {
+		.upload-image-button
+		{
+			padding-top: 26px !important;
+
+			.button-inner
+			{
+				ion-icon {
+					font-size: 3.2em !important;
+					margin-bottom: 8px;
+				}
+			}
+		}
+
+		.checkbox-list .checkbox-item
+		{
+		  margin-left: 1px;
+		}
+
+		.radio-group .radio-item
+		{
+			margin-left: 1px;
+		}
+
+		.range-item
+		{
+			@include range-item-md-styles($theme-color-1);
+		}
+
+		.switcher-item
+		{
+			@include switcher-item-md-styles($theme-color-1);
+		}
+	}
+}

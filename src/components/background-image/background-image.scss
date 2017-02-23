@@ -1,0 +1,28 @@
+background-image {
+  display: block;
+  position: relative;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include transition(all ease-in-out .3s);
+
+  .bg-overlay
+  {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0.6;
+  }
+
+  &.img-loaded
+  {
+		ion-spinner
+		{
+			visibility: hidden;
+			display: none;
+		}
+  }
+}

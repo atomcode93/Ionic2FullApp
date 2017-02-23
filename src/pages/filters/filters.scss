@@ -1,0 +1,131 @@
+filters-page {
+	ion-header {
+		@include header-styles(color($colors, header-alt, base), color($colors, header-alt, contrast));
+	}
+
+	ion-item-divider {
+		padding: 15px !important;
+		background-color: transparent !important;
+
+		.item-inner
+		{
+			min-height: 0px;
+
+			ion-label {
+				margin: 0px;
+				font-size: 1.2rem;
+				font-weight: 500;
+				letter-spacing: 0.9px;
+				color: $theme-color-3;
+			}
+		}
+	}
+
+	.filters-content
+	{
+		background-color: color($colors, background, base);
+	}
+
+	.range-list
+	{
+		@include range-item-styles($white-d, $black-d, $theme-color-1);
+	}
+
+	.checkbox-list
+	{
+		padding-left: 15px;
+		background-color: $white;
+		@include element-shadow();
+
+		@include checkbox-item-styles($white-d, $white, $theme-color-1);
+	}
+
+	.radio-group
+	{
+		padding-left: 15px;
+		background-color: $white;
+		@include element-shadow();
+
+		@include radio-item-styles($white-d, $white-a, $theme-color-1);
+	}
+
+	@include checkbox-tags-styles($white, $white-d, $theme-color-1, $white);
+
+	.rounded-tags
+	{
+		background-color: $white;
+		padding: 15px;
+		@include element-shadow();
+
+		.checkbox-tag
+		{
+			.item-inner
+			{
+				border-radius: 2.2rem;
+				background-color: $white-b;
+				color: $white;
+			}
+		}
+	}
+
+	@include radio-tags-styles($white, $theme-color-1, $white);
+
+	.radio-tags
+	{
+		@include flex-wrap(nowrap);
+		padding: 15px;
+
+		.radio-tag
+		{
+			border-radius: 8px;
+
+			.item-inner
+			{
+				padding: 0px 8px;
+
+				ion-label {
+					margin: 8px 0px;
+				}
+			}
+		}
+	}
+
+	.switchers-list
+	{
+		@include switcher-item-styles($white-d, $theme-color-1);
+
+		.switcher-item
+		{
+			padding: 0px;
+
+			.item-inner
+			{
+				padding: 0px;
+				border: none;
+
+				ion-label {
+					margin-left: 15px;
+				}
+			}
+		}
+	}
+
+	.counter-list
+	{
+		@include counter-item-styles($white-d, $theme-color-1, $white);
+	}
+
+	.ratings-list
+	{
+		@include rating-item-styles($white-d, $theme-color-1);
+	}
+
+	.color-tags
+	{
+		background-color: $white;
+		@include element-shadow();
+		@include flex-wrap(wrap);
+
+		@include color-radio-styles($white, $black);
+	}
+}

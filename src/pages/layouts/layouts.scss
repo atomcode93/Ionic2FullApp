@@ -1,0 +1,11 @@
+layouts-page {
+	.layouts-content
+	{
+		background-color: color($colors, background, base);
+
+		.layouts-list
+		{
+			@include basic-list-styles($theme-color-3, $theme-color-2);
+		}
+	}
+}

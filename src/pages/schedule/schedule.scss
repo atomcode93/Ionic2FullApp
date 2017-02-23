@@ -1,0 +1,163 @@
+schedule-page {
+	ion-header {
+		@include header-styles(color($colors, header-alt, base), color($colors, header-alt, contrast));
+	}
+
+	.schedule-content
+	{
+		background-color: color($colors, background, base);
+
+		.schedule-segment
+		{
+			padding: 14px 0px;
+			background-color: $white;
+			@include element-shadow();
+
+			@include segment-button-styles($theme-color-2);
+
+			.segment-button
+			{
+				@include segment-text-styles($white-d);
+			}
+		}
+
+		.schedule-list
+		{
+			padding: 10px 5px;
+
+			.schedule-item
+			{
+				padding: 5px;
+				background-color: transparent;
+				border: none;
+
+				.item-inner
+				{
+					border: none;
+					padding: 0px;
+
+					ion-label {
+						margin: 0px;
+					}
+				}
+
+				.schedule-date
+				{
+					color: $white-d;
+					text-align: center;
+					padding: 0px 10px 0px 0px;
+					@include align-self(center);
+
+					.schedule-day
+					{
+						font-size: 3.2rem;
+						font-weight: 400;
+					}
+
+					.schedule-month
+					{
+						font-size: 1.2rem;
+						font-weight: 500;
+						text-transform: uppercase;
+					}
+
+					.schedule-time
+					{
+						font-size: 1.2rem;
+						font-weight: 500;
+					}
+				}
+
+				.schedule-data
+				{
+					border-radius: 6px;
+					background-color: $white;
+					padding: 12px 14px;
+					@include element-shadow();
+
+					.data-item
+					{
+						@include display(flex);
+						@include align-items(center);
+						@include justify-content(space-between);
+
+						.item-content
+						{
+							flex: 0 0 90%;
+					    max-width: 90%;
+							padding-right: 5px;
+
+							.item-title
+							{
+								font-size: 1.6rem;
+								font-weight: 500;
+								letter-spacing: 0.2px;
+								color: $theme-color-2;
+								margin-bottom: 12px;
+
+								&.one-line
+								{
+									overflow: hidden;
+									text-overflow: ellipsis;
+									white-space: nowrap;
+								}
+							}
+
+							.item-description
+							{
+								margin-bottom: 4px;
+								@include display(flex);
+								@include align-items(center);
+								@include justify-content(space-between);
+
+								&:last-child
+								{
+									margin: 0px;
+								}
+
+								.description-icon
+								{
+									color: $white-d;
+									flex: 0 0 12%;
+							    max-width: 12%;
+									padding-right: 2px;
+									font-size: 2.1rem;
+									text-align: left;
+								}
+
+								.description-text
+								{
+									flex: 0 0 88%;
+							    max-width: 88%;
+									padding-left: 2px;
+									white-space: normal;
+									font-size: 1.2rem;
+									line-height: 1.4;
+									letter-spacing: 0.2px;
+									color: $white-d;
+
+									&.one-line
+									{
+										overflow: hidden;
+									  text-overflow: ellipsis;
+									  white-space: nowrap;
+									}
+								}
+							}
+						}
+
+						.item-icon
+						{
+							flex: 0 0 10%;
+					    max-width: 10%;
+						  text-align: right;
+							color: $theme-color-2;
+							font-size: 2.2em;
+							padding-left: 5px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

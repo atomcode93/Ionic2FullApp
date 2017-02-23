@@ -1,0 +1,3 @@
+@mixin element-shadow($color:$white-d){
+	box-shadow: inset 0 -0.5px 0 0 #{$color};
+}

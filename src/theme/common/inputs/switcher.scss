@@ -1,0 +1,65 @@
+@mixin switcher-item-styles($color, $active-color){
+	.switcher-item
+	{
+		border: none !important;
+		@include element-shadow();
+
+		.item-inner
+		{
+			padding: 0px;
+			border: none;
+
+			ion-label {
+				margin-top: 16px;
+				margin-bottom: 16px;
+				font-size: 1.4rem;
+				font-weight: 500;
+				letter-spacing: 0.2px;
+				color: $color;
+			}
+		}
+
+		ion-toggle {
+			.toggle-icon.toggle-checked
+			{
+				background-color: $active-color;
+			}
+		}
+	}
+}
+
+@mixin switcher-item-md-styles($toggle-color){
+	ion-toggle {
+		.toggle-icon.toggle-checked
+		{
+			.toggle-inner
+			{
+				background-color: $toggle-color;
+			}
+		}
+	}
+}
+
+@mixin switcher-item-wp-styles($toggle-color, $toggle-active-color){
+	ion-toggle {
+		.toggle-icon
+		{
+			border-color: $toggle-color;
+
+			.toggle-inner
+			{
+				background-color: $toggle-active-color;
+			}
+
+			&.toggle-checked
+			{
+				border-color: $toggle-active-color;
+
+				.toggle-inner
+				{
+					background-color: $toggle-color;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+ion-app.wp {
+	settings-page {
+		.user-data-content
+		{
+			ion-input input,
+			ion-textarea textarea {
+				padding: 0 8px !important;
+			}
+		}
+
+		.button-wp
+		{
+			border: none;
+		}
+
+		.switchers-list
+		{
+			.switcher-item
+			{
+				@include switcher-item-wp-styles($white-b, $theme-color-2);
+			}
+		}
+	}
+}

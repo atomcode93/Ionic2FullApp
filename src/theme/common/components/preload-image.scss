@@ -1,0 +1,8 @@
+@mixin preload-image-styles($background, $spinner-size, $spinner-color){
+  preload-image {
+    background-color: $background;
+
+		@include spinner-size($spinner-size);
+		@include spinner-color($spinner-color);
+  }
+}

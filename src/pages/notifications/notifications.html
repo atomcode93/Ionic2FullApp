@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Notifications</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="notifications-content">
+  <ion-item-group>
+    <ion-item-divider class="notifications-divider">Today</ion-item-divider>
+    <ion-item class="notification-item" *ngFor="let notification of notifications.today">
+      <ion-avatar item-left>
+        <preload-image class="user-image" [ratio]="{w:1, h:1}" [src]="notification.image"></preload-image>
+      </ion-avatar>
+      <h2 class="item-title">{{notification.name}}</h2>
+      <p class="item-description">{{notification.message}}</p>
+      <ion-note class="item-time" item-right>{{notification.date}}</ion-note>
+    </ion-item>
+    <ion-item-divider class="notifications-divider">Yesterday</ion-item-divider>
+    <ion-item class="notification-item" *ngFor="let notification of notifications.yesterday">
+      <ion-avatar item-left>
+        <preload-image class="user-image" [ratio]="{w:1, h:1}" [src]="notification.image"></preload-image>
+      </ion-avatar>
+      <h2 class="item-title">{{notification.name}}</h2>
+      <p class="item-description">{{notification.message}}</p>
+      <ion-note class="item-time" item-right>{{notification.date}}</ion-note>
+    </ion-item>
+  </ion-item-group>
+</ion-content>

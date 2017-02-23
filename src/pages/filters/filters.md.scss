@@ -1,0 +1,19 @@
+ion-app.md {
+	filters-page {
+		.range-list
+		{
+			.range-item
+			{
+				@include range-item-md-styles($theme-color-1);
+			}
+		}
+
+		.switchers-list
+		{
+			.switcher-item
+			{
+				@include switcher-item-md-styles($theme-color-1);
+			}
+		}
+	}
+}

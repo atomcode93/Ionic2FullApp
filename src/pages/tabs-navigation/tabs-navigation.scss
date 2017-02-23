@@ -1,0 +1,28 @@
+tabs-navigation {
+	.tabbar
+	{
+		background: color($colors, tabs-navigation, base) !important;
+		border-top-color: darken(color($colors, tabs-navigation, base), 6%) !important;
+
+		.tab-button
+		{
+			color: color($colors, tabs-navigation, contrast);
+
+			.tab-button-icon
+			{
+				color: color($colors, tabs-navigation, contrast);
+			}
+		}
+
+		.tab-button:hover:not(.disable-hover),
+		.tab-button[aria-selected=true]
+		{
+		  color: $theme-color-1;
+
+			.tab-button-icon
+			{
+				color: $theme-color-1;
+			}
+		}
+	}
+}

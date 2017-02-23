@@ -1,0 +1,143 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Forms Examples</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="forms-examples-content">
+  <ion-segment class="forms-examples-segment" [(ngModel)]="section" (ionChange)="onSegmentChanged($event)">
+    <ion-segment-button value="post" (ionSelect)="onSegmentSelected($event)">
+      Post
+    </ion-segment-button>
+    <ion-segment-button value="event" (ionSelect)="onSegmentSelected($event)">
+      Event
+    </ion-segment-button>
+    <ion-segment-button value="card" (ionSelect)="onSegmentSelected($event)">
+      Card
+    </ion-segment-button>
+  </ion-segment>
+  <div [ngSwitch]="section" class="forms-wrapper">
+    <div *ngSwitchCase="'post'" class="post-example-view">
+      <form class="sample-form post-form" [formGroup]="post_form" (ngSubmit)="createPost()">
+        <section class="form-section">
+          <ion-item>
+            <ion-input type="text" placeholder="Title: e.g. Krabby Patty" formControlName="title"></ion-input>
+          </ion-item>
+          <button ion-button block large class="upload-image-button">
+            <ion-icon name="camera"></ion-icon>
+            <h3 class="button-title">upload an image</h3>
+          </button>
+        </section>
+        <ion-item>
+          <ion-textarea rows="7" placeholder="Write a description or something..." formControlName="description"></ion-textarea>
+        </ion-item>
+        <section class="form-section">
+          <button ion-button block icon-right class="choose-category-button" (click)="chooseCategory()">
+            Choose category
+            <ion-icon name="add"></ion-icon>
+          </button>
+        </section>
+        <h2 class="section-title">Serves, times and temps</h2>
+        <ion-item class="counter-item">
+          <span class="counter-label">Servings</span>
+          <counter-input formControlName="servings"></counter-input>
+        </ion-item>
+        <ion-item class="time-item">
+          <ion-label>Time</ion-label>
+          <ion-datetime formControlName="time" displayFormat="h:mm" pickerFormat="h mm"></ion-datetime>
+        </ion-item>
+        <ion-item class="range-item">
+          <ion-label>
+            <h2 class="range-label">Temperature</h2>
+            <h3 class="range-value">{{post_form.controls.temperature.value}} &deg;C</h3>
+          </ion-label>
+          <ion-range formControlName="temperature" min="0" max="220" step="5" snaps="true" pin="false"></ion-range>
+        </ion-item>
+        <section class="form-section">
+          <button ion-button block class="form-action-button create-post-button" type="submit" [disabled]="!post_form.valid">Post!</button>
+        </section>
+      </form>
+    </div>
+    <div *ngSwitchCase="'event'" class="event-example-view">
+      <form class="sample-form event-form" [formGroup]="event_form" (ngSubmit)="createEvent()">
+        <section class="form-section">
+          <h2 class="section-title">Add an event</h2>
+          <ion-item>
+            <ion-input type="text" placeholder="Event title" formControlName="title"></ion-input>
+          </ion-item>
+          <ion-item icon-right>
+            <ion-input type="text" placeholder="Location" formControlName="location"></ion-input>
+            <ion-icon name="navigate" item-right></ion-icon>
+          </ion-item>
+          <ion-row no-padding class="multi-input-row">
+            <ion-col no-padding width-60>
+              <ion-item class="multi-input time-item">
+                <ion-label floating>From</ion-label>
+                <ion-datetime formControlName="from_date" displayFormat="DD/MM/YY" pickerFormat="DD-MM-YYYY"></ion-datetime>
+              </ion-item>
+            </ion-col>
+            <ion-col no-padding width-40>
+              <ion-item class="multi-input time-item">
+                <ion-datetime formControlName="from_time" displayFormat="h mm a" pickerFormat="h mm A"></ion-datetime>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row no-padding class="multi-input-row">
+            <ion-col no-padding width-60>
+              <ion-item class="multi-input time-item">
+                <ion-label floating>To</ion-label>
+                <ion-datetime formControlName="to_date" displayFormat="DD/MM/YY" pickerFormat="DD-MM-YYYY"></ion-datetime>
+              </ion-item>
+            </ion-col>
+            <ion-col no-padding width-40>
+              <ion-item class="multi-input time-item">
+                <ion-datetime formControlName="to_time" displayFormat="h mm a" pickerFormat="h mm A"></ion-datetime>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </section>
+        <section class="form-section">
+          <button ion-button block class="form-action-button create-event-button" type="submit" [disabled]="!event_form.valid">Done!</button>
+        </section>
+      </form>
+    </div>
+    <div *ngSwitchCase="'card'" class="card-example-view">
+      <form class="sample-form card-form" [formGroup]="card_form" (ngSubmit)="createCard()">
+        <section class="form-section">
+          <h2 class="section-title">Credit Card Information</h2>
+          <ion-item>
+            <ion-label floating>Card Number</ion-label>
+            <ion-input type="text" formControlName="card_number"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Card Holder</ion-label>
+            <ion-input type="text" formControlName="card_holder"></ion-input>
+          </ion-item>
+          <ion-row no-padding class="multi-input-row">
+            <ion-col no-padding width-50>
+              <ion-item class="multi-input">
+                <ion-label floating>CVC</ion-label>
+                <ion-input type="text" formControlName="cvc"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col no-padding width-50>
+              <ion-item class="multi-input time-item">
+                <ion-label floating>Exp. Date</ion-label>
+                <ion-datetime formControlName="exp_date" displayFormat="MM/YYYY" pickerFormat="MM-YYYY"></ion-datetime>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </section>
+        <ion-list class="card-preferences">
+          <ion-item class="switcher-item">
+            <ion-label>Save this card</ion-label>
+            <ion-toggle formControlName="save_card"></ion-toggle>
+          </ion-item>
+        </ion-list>
+        <section class="form-section">
+          <button ion-button block class="form-action-button create-card-button" type="submit" [disabled]="!card_form.valid">Confirm</button>
+        </section>
+      </form>
+    </div>
+  </div>
+</ion-content>

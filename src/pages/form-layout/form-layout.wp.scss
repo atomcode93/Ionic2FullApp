@@ -1,0 +1,127 @@
+ion-app.wp {
+	form-layout-page {
+		.forms-examples-segment
+		{
+			@include justify-content(center);
+			@include segment-button-wp-styles();
+		}
+
+		.range-item
+		{
+			@include range-item-wp-styles($theme-color-1);
+		}
+
+		.counter-item
+		{
+			.item-inner counter-input .counter-icon
+			{
+				ion-icon {
+					margin: 0px;
+				  border: none;
+				  padding: 1px;
+				  width: 100%;
+				}
+			}
+		}
+
+		.post-form
+		{
+			.upload-image-button
+			{
+				border: none;
+			}
+
+			.time-item
+			{
+				ion-datetime {
+					.datetime-text
+					{
+						text-align: right;
+					}
+				}
+			}
+		}
+
+		.event-form
+		{
+			.time-item
+			{
+				ion-datetime {
+				  width: 100%;
+					padding-right: 0px !important;
+					padding-top: 8px !important;
+					padding-bottom: 7px !important;
+				}
+			}
+		}
+
+		.card-form
+		{
+			.time-item
+			{
+				ion-datetime {
+					padding-right: 0px !important;
+				}
+			}
+		}
+
+		.switcher-item
+		{
+			@include switcher-item-wp-styles($white-b, $theme-color-2);
+		}
+
+		.sample-form
+		{
+			.item
+			{
+				padding: 0px;
+
+				.item-inner
+				{
+					padding: 0px;
+					position: relative;
+
+					ion-icon {
+						position: absolute;
+						right: 0px;
+						top: 0px;
+						margin: 13px 6px;
+						line-height: 3rem;
+						border: solid 2px rgba(0, 0, 0, 0);
+					}
+				}
+
+				.text-input
+				{
+					padding: 0px 0.6rem;
+				}
+
+				&[icon-right]
+				{
+					.text-input
+					{
+						padding-right: 35px;
+					}
+				}
+			}
+		}
+	}
+
+	ion-alert.category-prompt {
+		.alert-wrapper
+		{
+			width: 100%;
+		}
+
+		.alert-button-group
+		{
+			padding: 20px 22px;
+
+			.alert-button
+			{
+				background: $white;
+			}
+		}
+
+	}
+}

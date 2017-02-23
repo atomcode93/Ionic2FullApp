@@ -1,0 +1,10 @@
+ion-app.wp {
+	profile-page {
+		.user-content-segment
+		{
+			@include justify-content(center);
+
+			@include segment-button-wp-styles();
+		}
+	}
+}

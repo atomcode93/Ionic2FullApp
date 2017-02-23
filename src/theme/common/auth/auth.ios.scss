@@ -1,0 +1,15 @@
+ion-app.ios {
+	.auth-content
+	{
+		.auth-form
+		{
+			.show-hide-password
+			{
+				ion-item.item input[type=password].text-input
+				{
+					letter-spacing: 4px;
+				}
+			}
+		}
+	}
+}

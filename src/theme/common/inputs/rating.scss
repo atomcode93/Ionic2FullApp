@@ -1,0 +1,40 @@
+@mixin rating-item-styles($text-color, $value-color){
+	.rating-item
+	{
+		padding: 0px;
+		border: none !important;
+		@include element-shadow();
+
+		.item-inner
+		{
+			padding: 0px;
+			border: none;
+
+			ion-label {
+				margin: 0px;
+				@include display(flex);
+				@include justify-content(space-between);
+			}
+
+			.rating-label
+			{
+				margin: 15px;
+				font-size: 1.4rem;
+				font-weight: 500;
+				letter-spacing: 0.2px;
+				color: $text-color;
+				flex: 1;
+			}
+
+			rating {
+				flex: 1;
+				padding-right: 11px;
+
+				.rating-icon ion-icon {
+					color: $value-color;
+					font-size: 1.8em;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,45 @@
+ion-app.wp {
+	.auth-content
+	{
+		.auth-form
+		{
+			.item
+			{
+				padding: 0px;
+
+				.item-inner
+				{
+					padding: 0px;
+				}
+
+				.text-input
+				{
+					padding: 0px 0.6rem;
+				}
+			}
+
+			.show-hide-password
+			{
+				.type-toggle
+				{
+					height: 3rem;
+					margin: 15px 0px;
+
+					.show-option,
+					.hide-option
+					{
+			  		line-height: 3rem;
+						font-size: 2.4rem;
+						height: inherit;
+
+						&:not(ion-icon)
+						{
+							text-transform: uppercase;
+							font-size: 1.2rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}

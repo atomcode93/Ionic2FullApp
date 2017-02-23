@@ -1,0 +1,80 @@
+// These list styles are for the list-1 and list-2 views under the Layouts section
+@mixin layout-list-styles($color-1, $color-2){
+	ion-list {
+		margin: 0px;
+
+		.list-item
+		{
+			padding: 10px;
+			@include element-shadow();
+			border: none !important;
+
+			.content-row
+			{
+				@include align-items(flex-start);
+			}
+
+			.item-inner
+			{
+				border: none;
+				background: none;
+				padding: 0px;
+
+				ion-label {
+					margin: 0px;
+				}
+			}
+
+			.item-avatar
+			{
+				padding-right: 5px;
+
+				preload-image.avatar-image
+				{
+					border-radius: 6px;
+
+					img
+					{
+						border-radius: 6px;
+					}
+				}
+			}
+
+			.item-content
+			{
+				padding: 0px 5px;
+
+				.item-title
+				{
+					font-size: 1.6rem;
+					font-weight: 500;
+					letter-spacing: 0.2px;
+					color: $color-1;
+				}
+
+				.item-description
+				{
+					font-size: 1.2rem;
+					line-height: 1.1;
+					letter-spacing: 0.2px;
+					color: $color-2;
+					overflow: visible;
+					text-overflow: initial;
+					white-space: normal;
+				}
+			}
+
+			.item-icon
+			{
+				text-align: right;
+				color: $color-1;
+				padding-left: 10px;
+				@include align-self(center);
+
+				ion-icon {
+					font-size: 2.0em;
+				}
+			}
+		}
+	}
+}

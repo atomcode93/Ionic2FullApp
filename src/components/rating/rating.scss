@@ -1,0 +1,21 @@
+rating {
+	@include display(flex);
+	@include justify-content(flex-end);
+	@include align-items(center);
+
+	[ion-button].rating-icon
+	{
+		flex: 1;
+	  max-width: 2em;
+		margin: 0px;
+		padding: 0px 4px;
+	  min-width: 0px;
+	  background: none;
+		box-shadow: none;
+
+		ion-icon {
+			font-size: 1.6em;
+			padding: 0px;
+		}
+	}
+}

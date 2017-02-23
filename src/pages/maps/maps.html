@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Google Maps</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-row no-padding class="map-row">
+    <ion-col no-padding class="map-col">
+      <div class="search-container">
+        <!-- <ion-toolbar class="search-toolbar transparent-background"> -->
+        <ion-toolbar class="search-toolbar">
+          <ion-buttons start>
+            <button ion-button icon-only (click)="geolocateMe()" class="geolocation-button" [ngClass]="{'using-geolocation': map_model.using_geolocation}">
+              <ion-icon name="locate"></ion-icon>
+            </button>
+          </ion-buttons>
+          <ion-searchbar class="search-places-bar" placeholder="Search places near location" [(ngModel)]="map_model.search_query" (ionInput)="searchPlacesPredictions(map_model.search_query)" (ionClear)="clearSearch()"></ion-searchbar>
+        </ion-toolbar>
+        <ion-list [hidden]="map_model.search_places_predictions.length == 0" class="search-options-list">
+          <ion-item *ngFor="let place of map_model.search_places_predictions" tappable (click)="selectSearchResult(place)">
+            {{ place.description }}
+          </ion-item>
+        </ion-list>
+      </div>
+      <div class="map-container">
+        <google-map [options]="map_model.map_options"></google-map>
+      </div>
+      <ion-scroll [hidden]="map_model.nearby_places.length == 0" scrollX="true" class="nearby-places-container">
+        <ion-row class="nearby-places-row">
+          <ion-col width-64 class="place-item-outer" *ngFor="let place of map_model.nearby_places" [ngClass]="{'selected-place': place.selected}" (click)="choosePlace(place)">
+            <ion-card class="place-card">
+              <background-image class="place-image-heading" [src]="place.details.image">
+                <ion-row class="heading-row">
+                  <ion-col no-padding width-100>
+                    <h2 class="place-title">{{ place.details.name }}</h2>
+                  </ion-col>
+                </ion-row>
+              </background-image>
+              <div class="place-details-container">
+                <ion-row class="details-row">
+                  <ion-col no-padding width-50>
+                    <span class="opening-hours" [ngClass]="{'opened': (place.details && place.details.opening_hours && place.details.opening_hours.open_now), 'closed': !(place.details && place.details.opening_hours && place.details.opening_hours.open_now)}">
+                      {{ (place.details && place.details.opening_hours && place.details.opening_hours.open_now) ? 'OPENED' : 'CLOSED' }}
+                    </span>
+                  </ion-col>
+                  <ion-col no-padding width-50>
+                    <div class="place-rating">
+                      <ion-item class="rating-item">
+                        <rating [(ngModel)]="place.details.rating" max="5" read-only="true"></rating>
+                      </ion-item>
+                    </div>
+                  </ion-col>
+                </ion-row>
+                <ion-list class="details-list" no-lines>
+                  <ion-item class="place-location">
+                    <ion-avatar item-left>
+                      <ion-icon name="pin"></ion-icon>
+                    </ion-avatar>
+                    <span class="location-text">{{ place.details.vicinity }}</span>
+                  </ion-item>
+                </ion-list>
+              </div>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-scroll>
+    </ion-col>
+  </ion-row>
+</ion-content>

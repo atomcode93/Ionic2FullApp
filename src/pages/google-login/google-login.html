@@ -1,0 +1,59 @@
+<ion-header class="google-header">
+  <ion-navbar>
+    <ion-title>Google</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="google-integration-content">
+
+  <div *ngIf="!user.userId">
+    <h1 class="no-connection-message">You haven't linked your Google account yet.</h1>
+    <ion-row class="actions-row google-connect-row">
+      <ion-col no-padding width-100>
+        <button ion-button block class="auth-action-button google-auth-button" (click)="doGoogleLogin()">Connect with Google</button>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div *ngIf="user.userId">
+    <background-image class="user-image-heading" [src]="user.image"></background-image>
+    <ion-row class="contact-details-row" wrap>
+      <ion-col no-padding width-100>
+        <h2 class="contact-name">{{user.name}}</h2>
+      </ion-col>
+      <ion-col no-padding width-100>
+        <p class="contact-description">
+          {{user.email}}
+        </p>
+      </ion-col>
+    </ion-row>
+    <h3 class="divider-heading">Friends</h3>
+    <ion-row class="friends-row">
+      <ion-col no-padding class="friend-col" *ngFor="let friend_image of user.friends">
+        <preload-image class="rounded-image" [ratio]="{w:1, h:1}" [src]="friend_image" alt="google friend" title="google friend"></preload-image>
+        <h4 class="friend-name">Tom</h4>
+      </ion-col>
+      <ion-col no-padding class="friend-col">
+        <div class="more-friends">
+          <h3 class="more-friends-text">22</h3>
+        </div>
+      </ion-col>
+    </ion-row>
+    <h3 class="divider-heading">Photos</h3>
+    <ion-scroll scrollX="true" class="horizontal-photos-scroll">
+      <ion-row class="photos-row">
+        <ion-col no-padding width-30 class="photo-col" *ngFor="let photo of user.photos; let i = index">
+          <preload-image [ratio]="{w:1, h:1}" [src]="photo" alt="google photo" title="google photo"></preload-image>
+          <div *ngIf="i == (user.photos.length -1)" class="has-more-images">
+            <h3 class="images-count">107</h3>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-scroll>
+    <ion-row class="actions-row">
+      <ion-col no-padding width-100>
+        <button ion-button block class="auth-action-button logout-button" (click)="doGoogleLogout()">Log out</button>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

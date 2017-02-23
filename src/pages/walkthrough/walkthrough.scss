@@ -1,0 +1,118 @@
+walkthrough-page {
+	.walkthrough-header
+	{
+		@include header-styles(color($colors, walkthrough-header, base), color($colors, walkthrough-header, contrast));
+	}
+
+	.walkthrough-content
+	{
+		// Default background when bouncing isn't disabled
+		background-color: color($colors, walkthrough, base);
+
+		.scroll-content
+		{
+			margin: 0px !important;
+		}
+
+		ion-slide:nth-child(odd)
+		{
+			background-color: color($colors, walkthrough, base);
+			color: color($colors, walkthrough, contrast);
+		}
+
+		ion-slide:nth-child(even)
+		{
+			background-color: color($colors, walkthrough-alt, base);
+			color: color($colors, walkthrough-alt, contrast);
+		}
+
+		.swiper-pagination-bullet
+		{
+		  background: $white;
+			opacity: .5;
+
+			&.swiper-pagination-bullet-active
+			{
+			  opacity: 1;
+			}
+		}
+
+		ion-slides {
+
+			ion-slide {
+				@include align-items(flex-start);
+			}
+
+			.intro-image-row
+			{
+				@include justify-content(center);
+				margin-top: 90px;
+				margin-top: 16vh;
+			}
+
+			.main-title
+			{
+				margin: 35px 20px 20px;
+				font-size: 3.4rem;
+				font-weight: 900;
+				font-style: italic;
+				text-align: center;
+				color: $white;
+			}
+
+			.intro-text
+			{
+				margin: 0px 20%;
+				font-size: 1.4rem;
+				line-height: 1.35;
+				text-align: center;
+				color: $white;
+			}
+		}
+
+		.slide-4
+		{
+			.main-title
+			{
+				margin-top: 15px;
+			}
+
+			.button-bar
+			{
+				@include display(flex);
+				margin: 25px 8%;
+
+				& > .button
+				{
+					@include segment-text-styles(color($colors, button-alt, base));
+					background-color: color($colors, button-alt, contrast);
+					margin: 0px;
+					border-radius: 0px;
+					@include flex(1);
+
+					&:first-child
+					{
+					  border-radius: 6px 0px 0px 6px;
+
+						&::after
+						{
+							content: '';
+							background-color: color($colors, button-alt, base);
+							width: 2px;
+							@include calc(height, "100% - 20px");
+							margin: 10px 0px;
+							position: absolute;
+						  top: 0px;
+						  right: 0px;
+							opacity: 0.6;
+						}
+					}
+					&:last-child
+					{
+					  border-radius: 0px 6px 6px 0px;
+					}
+				}
+			}
+		}
+	}
+}

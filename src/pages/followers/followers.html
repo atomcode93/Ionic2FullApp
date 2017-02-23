@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Followers</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="followers-content">
+  <!-- <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar> -->
+  <ion-searchbar placeholder="Search"></ion-searchbar>
+  <ion-list class="followers-list">
+    <ion-item class="list-item" *ngFor="let item of list">
+      <ion-thumbnail item-left>
+        <preload-image [ratio]="{w:1, h:1}" [src]="item.image" alt="item.name" title="item.name"></preload-image>
+      </ion-thumbnail>
+      <h2 class="item-title">{{item.name}}</h2>
+      <p class="item-description" rows="2">{{item.about}}</p>
+      <button class="relation-button" [ngClass]="{following: !item.inverse_relation}" ion-button clear icon-only item-right>
+        <ion-icon *ngIf="item.inverse_relation" name="person-add"></ion-icon>
+        <ion-icon *ngIf="!item.inverse_relation" name="checkmark"></ion-icon>
+      </button>
+    </ion-item>
+  </ion-list>
+</ion-content>

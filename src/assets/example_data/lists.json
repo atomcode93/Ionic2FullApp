@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "name": "Crossfit WorldWide Event",
+      "image": "./assets/images/lists/200x200EventCrossfit.png",
+      "description": "At the Crossfit WorldWide Event athletes at compete in workouts that they learn about hours or days beforehand, consisting mostly of an assortment of standard aerobic, weightlifting, and gymnastics movement."
+    },
+    {
+      "name": "US Open",
+      "image": "./assets/images/lists/200x200EventUSOpen.png",
+      "description": "The United States Open Tennis Championships is a hardcourt tennis tournament. The tournament is the modern version of one of the oldest tennis championships in the world, the U.S. National Championship, for which men's singles was first contested in 1881."
+    },
+    {
+      "name": "The Basketball Tournament",
+      "image": "./assets/images/lists/200x200TBT.png",
+      "description": "The Basketball Tournament (TBT) is an open-application, single-elimination tournament played each summer in the United States, currently featuring 64 teams. It was founded in 2014 by Jonathan Mugar."
+    },
+    {
+      "name": "British Open",
+      "image": "./assets/images/lists/200x200BritishOpen.png",
+      "description": "The Open Championship, often referred to as The Open or the British Open, is the oldest of the four major championships in professional golf. Held in the United Kingdom, it is administered by The R&A and is the only major outside the United States."
+    },
+    {
+      "name": "FIFA World Cup",
+      "image": "./assets/images/lists/200x200FIFA.png",
+      "description": "The FIFA World Cup, often simply called the World Cup, is an international association football competition contested by the senior men's national teams of the members of Fédération Internationale de Football Association (FIFA), the sport's global governing body."
+    }
+  ]
+}

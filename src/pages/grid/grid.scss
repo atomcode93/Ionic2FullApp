@@ -1,0 +1,84 @@
+grid-page {
+	ion-item-divider {
+		padding: 15px 10px !important;
+
+		.item-inner
+		{
+			min-height: 0px;
+
+			ion-label {
+				margin: 0px;
+				font-size: 1.2rem;
+				font-weight: 500;
+				letter-spacing: 0.9px;
+				color: $theme-color-3;
+			}
+		}
+	}
+
+	.grid-example
+	{
+		padding: 10px 5px 0px 5px;
+		@include flex-wrap(wrap);
+
+		.grid-item
+		{
+			padding: 0px 5px 10px;
+
+			&.double-item
+			{
+				& > .grid-item
+				{
+					padding: 5px 0px;
+
+					&:first-child
+					{
+						padding-top: 0px;
+					}
+
+					&:last-child
+					{
+						padding-bottom: 0px;
+					}
+				}
+			}
+
+			.grid-item-wrapper
+			{
+				position: relative;
+				padding-bottom: 100%;
+				height: 0px;
+				background-color: $white-c;
+
+				.grid-item-inner
+				{
+					height: 100%;
+					width: 100%;
+					position: absolute;
+					@include display(flex);
+					@include justify-content(center);
+  				@include align-items(center);
+
+					.item-title
+					{
+						margin: 0px;
+						color: $black-c;
+						text-align: center;
+					}
+
+					&.multi-line
+					{
+						@include flex-wrap(wrap);
+
+						.item-title
+						{
+							flex: 0 0 100%;
+					    max-width: 100%;
+							margin: 5px 0px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

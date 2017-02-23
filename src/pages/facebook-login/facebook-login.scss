@@ -1,0 +1,197 @@
+facebook-login-page {
+	$facebook-image-heading-height: 48vh;
+
+	.facebook-header
+	{
+		@include header-styles(color($colors, facebook, base), color($colors, facebook, contrast));
+	}
+
+	.facebook-integration-content
+	{
+		background-color: color($colors, background, base);
+
+		&.connected
+		{
+			@include background-image(linear-gradient(top, color($colors, facebook, base) 0%, color($colors, facebook, base) 45%, color($colors, background, base) 45%));
+		}
+
+		.no-connection-message
+		{
+			margin: 30px 6% 20px;
+			color: rgba($black-d, .7);
+			line-height: 1.33;
+			text-align: center;
+		}
+
+		.facebook-connect-row
+		{
+			padding: 16px;
+			
+			.facebook-auth-button
+			{
+				@include call-to-action-button-styles(color($colors, facebook, base), color($colors, facebook, contrast));
+			}
+		}
+
+		.facebook-card
+		{
+			margin-top: 24px;
+			margin-bottom: 24px;
+			background-color: $white;
+			border-radius: 6px;
+			@include element-shadow();
+
+			.user-image-heading
+			{
+				height: $facebook-image-heading-height;
+
+				.heading-row
+				{
+					height: 100%;
+					@include align-items(flex-end);
+					background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 50%, rgba(0, 0, 0, 0.5));
+
+					.user-details-col
+					{
+						height: ($facebook-image-heading-height / 5);
+						display: flex;
+						@include align-items(center);
+					}
+
+					.user-name
+					{
+						font-size: 1.7rem;
+						color: $white-a;
+						margin: 0px;
+						margin-left: 14px;
+						font-weight: 400;
+					}
+
+					.user-gender-icon
+					{
+						font-size: 1.6rem;
+						margin-left: 14px;
+						margin-right: 4px;
+						color: $white-a;
+					}
+
+					.user-gender
+					{
+						font-size: 1.2rem;
+						margin-right: 14px;
+						color: $white-a;
+					}
+				}
+			}
+
+			.divider-heading
+			{
+				text-align: center;
+				font-size: 1.2rem;
+				font-weight: 600;
+				letter-spacing: 0.9px;
+				color: $theme-color-3;
+				margin: 18px 0px;
+			}
+
+			.friends-row
+			{
+				padding: 0px 14px;
+				margin-bottom: 40px;
+				@include flex-direction(row-reverse);
+
+				.friend-col
+				{
+					margin-left: -10px;
+					z-index: 2;
+
+					&:first-child
+					{
+						z-index: 1;
+					}
+
+					&:nth-last-child(2)
+					{
+						margin-left: 0px;
+					}
+
+					&:last-child
+					{
+						z-index: 0;
+						@include order(-1);
+						border-radius: 50%;
+						background: $theme-color-1;
+						@include align-items(center);
+						@include justify-content(center);
+  					display: flex;
+					}
+
+					.more-friends
+					{
+						color: $white;
+						margin: 0px;
+						margin-left: -2px;
+
+						&::before
+						{
+							content: '+';
+							font-weight: 500;
+							margin-right: 2px;
+							font-size: 1.2rem;
+						}
+					}
+				}
+			}
+
+			.photos-row
+			{
+				.photo-col
+				{
+					position: relative;
+
+					.has-more-images
+					{
+						position: absolute;
+						top: 0px;
+						bottom: 0px;
+						left: 0px;
+						right: 0px;
+						background-color: rgba($theme-color-1, .7);
+						@include display(flex);
+						@include align-items(center);
+						@include justify-content(center);
+
+						.images-count
+						{
+							color: $white;
+							margin: 0px;
+							margin-left: -6px;
+
+							&::before
+							{
+								content: '+';
+								font-weight: 500;
+								margin-right: 2px;
+								font-size: 1.2rem;
+							}
+						}
+					}
+				}
+			}
+
+			.actions-row
+			{
+				padding: 24px 16px;
+
+				.auth-action-button
+				{
+					margin: 0px;
+
+					@include call-to-action-button-styles(color($colors, button, base), color($colors, button, contrast));
+				}
+			}
+		}
+
+
+	}
+}

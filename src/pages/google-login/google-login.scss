@@ -1,0 +1,194 @@
+google-login-page {
+	$google-image-heading-height: 48vh;
+	$google-friends-list-padding: 6px;
+	$google-photos-list-padding: 6px;
+
+	.google-header
+	{
+		@include header-styles(color($colors, google, base), color($colors, google, contrast));
+	}
+
+	.google-integration-content
+	{
+		background-color: color($colors, background, base);
+
+		.no-connection-message
+		{
+			margin: 30px 6% 20px;
+			color: rgba($black-d, .7);
+			line-height: 1.33;
+			text-align: center;
+		}
+
+		.google-connect-row
+		{
+			padding: 16px;
+
+			.auth-action-button.google-auth-button
+			{
+				@include call-to-action-button-styles(color($colors, google, base), color($colors, google, contrast));
+			}
+		}
+
+		.user-image-heading
+		{
+			height: $google-image-heading-height;
+		}
+
+		.contact-details-row
+		{
+			background: $black-a;
+			color: $white-b;
+			padding: 16px;
+
+			.contact-name
+			{
+				margin: 0px;
+				font-size: 2.2rem;
+				font-weight: 400;
+			}
+
+			.contact-description
+			{
+				margin: 8px 0px 0px;
+				color: $white-d;
+			}
+		}
+
+		.divider-heading
+		{
+			text-align: left;
+			font-size: 1.2rem;
+			font-weight: 600;
+			letter-spacing: 0.9px;
+			color: $theme-color-3;
+			margin: 18px 14px;
+		}
+
+		.friends-row
+		{
+			padding: 0px;
+
+			&::after{
+				content: '';
+				flex: 0 0 $google-friends-list-padding;
+				max-width: $google-friends-list-padding;
+			}
+
+			.friend-col
+			{
+				padding: 0px 0px 0px $google-friends-list-padding;
+
+				.friend-name
+				{
+					font-size: 1.1rem;
+					line-height: 1.6;
+					text-align: center;
+					color: $white-d;
+					margin: 3px 0px 0px;
+				}
+
+				.more-friends
+				{
+					border-radius: 50%;
+					background: $theme-color-1;
+					width: 100%;
+					height: 0px;
+					padding-bottom: 100%;
+					position: relative;
+
+					.more-friends-text
+					{
+						font-size: 1.4rem;
+						color: $white;
+						margin: 0px;
+						width: 100%;
+						height: 100%;
+						@include align-items(center);
+						@include justify-content(center);
+						display: flex;
+						position: absolute;
+						top: 0px;
+						left: 0px;
+						margin-top: -2px;
+
+						&::before
+						{
+							content: '+';
+							font-weight: 500;
+							margin-right: 2px;
+							margin-left: -6px;
+							font-size: 1.2rem;
+						}
+					}
+				}
+			}
+		}
+
+		.horizontal-photos-scroll
+		{
+			.scroll-content
+			{
+				position: relative;
+				contain: style layout;
+			}
+
+			.photos-row
+			{
+				&::after{
+					content: '';
+					flex: 0 0 $google-photos-list-padding;
+			    max-width: $google-photos-list-padding;
+				}
+			}
+
+			.photo-col
+			{
+				padding: 0px 0px 0px $google-photos-list-padding;
+				position: relative;
+
+				.has-more-images
+				{
+					position: absolute;
+					top: 0px;
+					bottom: 0px;
+					left: $google-photos-list-padding;
+					right: 0px;
+					background-color: rgba($theme-color-1, .7);
+					@include display(flex);
+					@include align-items(center);
+					@include justify-content(center);
+
+					.images-count
+					{
+						color: $white;
+						margin: 0px;
+						margin-left: -6px;
+						font-size: 1.4rem;
+
+						&::before
+						{
+							content: '+';
+							font-weight: 500;
+							margin-right: 2px;
+							font-size: 1.2rem;
+						}
+					}
+				}
+			}
+		}
+
+		.actions-row
+		{
+			padding: 24px 16px;
+
+			.auth-action-button
+			{
+				margin: 0px;
+
+				@include call-to-action-button-styles(color($colors, button, base), color($colors, button, contrast));
+			}
+		}
+
+	}
+}

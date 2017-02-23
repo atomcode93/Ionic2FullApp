@@ -1,0 +1,23 @@
+.legal-header
+{
+	@include header-styles(color($colors, header-alt, base), color($colors, header-alt, contrast));
+}
+
+.legal-content
+{
+	padding: 16px 6%;
+	background-color: color($colors, background, base);
+	color: $theme-color-3;
+
+	.scroll-content
+	{
+		padding: 16px 6%;
+	}
+
+	.legal-title
+	{
+		color: $theme-color-2;
+		margin-top: 10px;
+		margin-bottom: 25px;
+	}
+}

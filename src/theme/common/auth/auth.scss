@@ -1,0 +1,87 @@
+.auth-header
+{
+	@include header-styles(color($colors, header, base), color($colors, header, contrast));
+}
+
+.auth-content
+{
+	padding: 16px 6%;
+	background-color: color($colors, background, base);
+
+	.scroll-content
+	{
+		padding: 16px 6%;
+	}
+
+	.auth-title
+	{
+		color: $theme-color-2;
+		margin-top: 10px;
+		margin-bottom: 25px;
+	}
+
+	.auth-form
+	{
+		ion-item {
+			@include basic-input-style(color($colors, background, base), $theme-color-3, $white-d);
+
+			&.item
+			{
+				input[type="password"].text-input
+				{
+					padding-right: 6rem;
+				}
+			}
+		}
+
+		.auth-action-button
+		{
+			margin: 0px;
+			margin-top: 20px;
+
+			@include call-to-action-button-styles(color($colors, button, base), color($colors, button, contrast));
+		}
+
+		.show-hide-password
+		{
+			.type-toggle
+			{
+				color: $white-d;
+				margin: 0px;
+				padding: 0px 6px;
+				text-align: right;
+			}
+		}
+	}
+
+	.auth-divider
+	{
+		font-size: 1.6rem;
+		color: $white-d;
+		margin: 20px 0px;
+		text-align: center;
+	}
+
+	.facebook-auth-button
+	{
+		margin: 0px;
+		@include call-to-action-button-styles(color($colors, facebook, base), color($colors, facebook, contrast));
+	}
+
+	.google-auth-button
+	{
+		margin: 0px;
+		margin-top: 20px;
+		@include call-to-action-button-styles(color($colors, google, base), color($colors, google, contrast));
+	}
+
+	.twitter-auth-button
+	{
+		margin: 0px;
+		margin-top: 20px;
+		@include call-to-action-button-styles(color($colors, twitter, base), color($colors, twitter, contrast));
+	}
+}
+
+@import "./auth.ios";
+@import "./auth.wp";

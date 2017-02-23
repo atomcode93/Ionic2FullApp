@@ -1,0 +1,44 @@
+{
+    "feed": [
+        {
+            "title": "Paddleboarding",
+            "image": "./assets/images/feed/500x333paddleboarding.png",
+            "description": "Paddleboarding participants are propelled by a swimming motion using their arms while lying, kneeling, or standing on a paddleboard in the ocean",
+            "likes": 52,
+            "comments": 3,
+            "liked": true
+        },
+        {
+            "title": "Hydroflight Sports",
+            "image": "./assets/images/feed/500x333HydroflightSports.png",
+            "description": "Hydroflight sports are a category of sport in which water jet propulsion is used to create sustained flight where lift and movement are controlled by a person riding on a propulsion device. ",
+            "likes": 11,
+            "comments": 7,
+            "liked": false
+        },
+        {
+            "title": "Parasailing",
+            "image": "./assets/images/feed/500x333Parasailing.png",
+            "description": "Parasailing is a recreational kiting activity where a person is towed behind a vehicle while attached to a specially designed canopy wing that reminds one of a parachute, known as a parasail wing.",
+            "likes": 36,
+            "comments": 1,
+            "liked": true
+        },
+        {
+            "title": "Waterpolo",
+            "image": "./assets/images/feed/500x333Waterpolo.png",
+            "description": "Water polo is a team water sport that consists of four quarters in which the two teams attempt to score goals by throwing the ball into their opponent's goal. The team with the most goals at the end of the game wins the match.",
+            "likes": 27,
+            "comments": 11,
+            "liked": false
+        },
+        {
+            "title": "Skimboarding",
+            "image": "./assets/images/feed/500x333Skimboarding.png",
+            "description": "Skimboarding (or skimming) is a boardsport in which a skimboard (much like a surfboard but smaller and without fins) is used to glide across the water's surface to meet an incoming breaking wave, and ride it back to shore.",
+            "likes": 2,
+            "comments": 5,
+            "liked": true
+        }
+    ]
+}

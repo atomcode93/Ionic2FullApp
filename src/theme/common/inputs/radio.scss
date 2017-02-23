@@ -1,0 +1,53 @@
+@mixin radio-item-styles($color, $background, $active-color){
+	.radio-item
+	{
+		padding: 0px;
+		border: none !important;
+		@include element-shadow();
+
+		.item-inner
+		{
+			padding: 0px;
+			border: none;
+
+			ion-label {
+				margin: 16px 0px 16px 8px;
+				font-size: 1.4rem;
+				font-weight: 500;
+				letter-spacing: 0.2px;
+				color: $color;
+			}
+		}
+
+		ion-radio {
+			margin-left: 8px !important;
+			margin-right: 12px !important;
+
+			.radio-icon
+			{
+				border: none;
+				background-color: $background;
+				border-radius: 50%;
+				width: 22px;
+				height: 22px;
+
+				.radio-inner
+				{
+					background-color: $background;
+				}
+
+				&.radio-checked .radio-inner
+				{
+					border: none;
+					background-color: $active-color;
+					border-radius: 50%;
+					width: 12px;
+					height: 12px;
+					top: 5px;
+					left: 5px;
+					transform: rotate(0deg);
+				}
+			}
+		}
+	}
+}

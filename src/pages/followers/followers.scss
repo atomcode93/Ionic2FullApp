@@ -1,0 +1,104 @@
+$followers-description-font-size: 12px;
+
+followers-page {
+	.followers-content
+	{
+		background-color: color($colors, background, base);
+
+		ion-searchbar {
+			background: transparent;
+			padding: 10px;
+			border: none;
+
+			.searchbar-input
+			{
+				border-radius: 1.5rem;
+				color: $theme-color-2;
+				background-color: $white-c;
+			}
+
+			.searchbar-search-icon {
+			  @include ios-searchbar-icon($searchbar-ios-input-search-icon-svg, $theme-color-2);
+			}
+		}
+
+		.followers-list
+		{
+			margin: 10px;
+
+			.list-item
+			{
+				margin: 6px 0px;
+				border-radius: 6px;
+				border: none;
+				padding: 0px;
+				@include element-shadow();
+
+				ion-thumbnail {
+					flex: 0 0 24%;
+			    max-width: 24%;
+					margin: 0px;
+					padding: 8px;
+				}
+
+				.item-inner
+				{
+					border: none;
+					padding: 0px;
+
+					.input-wrapper
+					{
+						padding: 8px;
+					}
+
+					ion-label {
+						margin: 0px;
+						@include align-self(flex-start);
+
+						.item-title
+						{
+							font-size: 1.4rem;
+							font-weight: 500;
+							letter-spacing: 0.2px;
+							color: $theme-color-3;
+							margin-bottom: 6px;
+						}
+
+						.item-description
+						{
+							letter-spacing: 0.2px;
+							word-break: break-word;
+							color: $white-d;
+							@include multi-line-ellipsis($followers-description-font-size);
+						}
+					}
+
+					.relation-button
+					{
+						margin: 0px;
+					  padding: 0px 16px;
+					  height: inherit;
+						@include align-self(stretch);
+					  border-radius: 0px 6px 6px 0px;
+						background-color: $theme-color-2;
+					  width: 24%;
+
+						&.following
+						{
+							background-color: $theme-color-1;
+
+							ion-icon {
+								font-size: 4.2em;
+							}
+						}
+
+						ion-icon {
+							font-size: 2.4em;
+							color: $white;
+						}
+					}
+				}
+			}
+		}
+	}
+}

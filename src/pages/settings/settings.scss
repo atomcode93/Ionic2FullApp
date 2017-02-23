@@ -1,0 +1,176 @@
+settings-page {
+	.settings-content
+	{
+		background-color: color($colors, background, base);
+
+		.user-image-content
+		{
+			padding: 16px;
+			margin-bottom: 20px;
+			background-color: $white;
+			@include element-shadow();
+
+			.user-image-row
+			{
+				@include justify-content(center);
+
+				.user-image
+				{
+					border-radius: 50%;
+				}
+			}
+
+			.image-action
+			{
+				font-size: 1.4rem;
+				line-height: 1.5;
+				text-align: center;
+				color: $theme-color-2;
+				margin: 10px 0px 0px;
+				font-weight: 400;
+			}
+		}
+
+		.user-data-content
+		{
+			padding: 0px;
+			margin-bottom: 20px;
+
+			ion-item {
+				border: none !important;
+				padding: 0px 20px;
+				@include element-shadow();
+
+				.item-inner
+				{
+					border: none;
+					padding: 0px;
+
+					ion-label {
+						margin: 6px 0px 4px;
+						font-size: 1.1rem;
+						line-height: 1.2;
+						letter-spacing: 0.5px;
+						color: $white-d;
+					}
+
+					ion-input input,
+					ion-textarea textarea {
+						margin: 0px;
+						margin-bottom: 8px;
+						padding: 0px;
+						width: 100%;
+						font-size: 1.6rem;
+						line-height: 1.4;
+						color: $theme-color-3;
+					}
+				}
+			}
+		}
+
+		.user-preferences-row
+		{
+			margin: 0px 0px 20px;
+			padding: 0px 20px;
+			@include element-shadow();
+			background-color: $white;
+
+			.radio-tags-label
+			{
+				font-size: 1.4rem;
+				letter-spacing: 0.2px;
+				color: $white-d;
+				flex: 1;
+				@include align-self(center);
+			}
+		}
+
+		.settings-form
+		{
+			margin-bottom: 80px;
+		}
+
+		@include radio-tags-styles($white, $theme-color-1, $white);
+
+		.radio-tags
+		{
+			flex: 1;
+			@include flex-wrap(nowrap);
+			@include justify-content(flex-end);
+			padding: 0px;
+			margin: 0px;
+		  margin-right: -5px;
+
+			.radio-tag
+			{
+				border-radius: 50%;
+				width: 38px;
+				height: 38px;
+				max-width: 38px;
+
+				.item-inner
+				{
+					padding: 0px;
+
+					ion-label {
+						margin: 0px;
+						font-size: 1.8rem;
+						letter-spacing: 0.3px;
+						font-weight: 300;
+					}
+				}
+			}
+		}
+
+		.switchers-list
+		{
+			@include switcher-item-styles($white-d, $theme-color-1);
+
+			.switcher-item
+			{
+			  padding: 0px 20px;
+
+				.item-inner
+				{
+					padding: 0px;
+					border: none;
+
+					ion-label {
+						margin-left: 0px;
+					}
+				}
+
+				ion-toggle {
+					padding-right: 0px;
+				}
+			}
+		}
+
+		.alt-button
+		{
+			margin: 0px;
+			background-color: $white;
+			font-size: 1.4rem;
+			letter-spacing: 0.2px;
+			color: $white-d;
+
+			@include element-shadow();
+		}
+
+		.logout-button
+		{
+			margin: 14px 0px 20px;
+			padding: 0px 20px;
+
+			.button-inner
+			{
+				@include justify-content(flex-start);
+			}
+
+			ion-icon {
+			  font-size: 1.8em;
+			}
+		}
+
+	}
+}

@@ -1,0 +1,11 @@
+ion-app.md {
+	settings-page {
+		.switchers-list
+		{
+			.switcher-item
+			{
+				@include switcher-item-md-styles($theme-color-1);
+			}
+		}
+	}
+}

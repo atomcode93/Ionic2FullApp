@@ -1,0 +1,52 @@
+@mixin checkbox-tags-styles($background, $color, $active-background, $active-color){
+	.checkbox-tags
+	{
+		@include display(flex);
+		@include flex-wrap(wrap);
+		padding: 0px 15px;
+
+		.checkbox-tag
+		{
+			flex: 0 1 auto;
+			width: initial;
+			font-size: 1.4rem;
+			font-weight: 500;
+			letter-spacing: 0.2px;
+			text-align: center;
+			background-color: transparent;
+			border: none !important;
+			padding: 0px;
+  		margin: 5px;
+
+			ion-checkbox {
+				margin: 0px !important;
+
+				.checkbox-icon
+				{
+					display: none;
+				}
+			}
+
+			.item-inner
+			{
+				padding: 0px 8px;
+				border: none;
+				background-color: $background;
+				color: $color;
+
+				ion-label {
+					margin: 8px 6px;
+				}
+			}
+
+			&.item-checkbox-checked
+			{
+				.item-inner
+				{
+					background-color: $active-background;
+					color: $active-color;
+				}
+			}
+		}
+	}
+}

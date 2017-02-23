@@ -1,0 +1,19 @@
+ion-app.wp {
+	filters-page {
+		.range-list
+		{
+			.range-item
+			{
+				@include range-item-wp-styles($theme-color-1);
+			}
+		}
+
+		.switchers-list
+		{
+			.switcher-item
+			{
+				@include switcher-item-wp-styles($white-b, $theme-color-2);
+			}
+		}
+	}
+}

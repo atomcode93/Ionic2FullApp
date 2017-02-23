@@ -1,0 +1,181 @@
+contact-card-page {
+	$contact-card-slides-height: 45%;
+
+	.contact-card-content
+	{
+		.contact-slides
+		{
+			height: $contact-card-slides-height;
+
+			ion-slide.contact-slide
+			{
+				.slide-zoom
+				{
+					height: 100%;
+				}
+			}
+
+			.swiper-pagination
+			{
+				.swiper-pagination-bullet
+				{
+					opacity: 1;
+					background: $white;
+					width: 10px;
+					height: 10px;
+				}
+
+				.swiper-pagination-bullet-active
+				{
+					background: $theme-color-1;
+				}
+			}
+		}
+
+		.contact-details-row
+		{
+			background: $black-a;
+			color: $white-b;
+			padding: 16px;
+
+			.contact-name
+			{
+				margin: 0px;
+				font-size: 2.2rem;
+				font-weight: 400;
+			}
+
+			.rating-col
+			{
+				display: flex;
+				@include align-items(center);
+				@include justify-content(flex-end);
+			}
+
+			.contact-rating
+			{
+				@include rating-item-styles($white-d, $theme-color-1);
+
+				.rating-item
+				{
+					box-shadow: none;
+					background: transparent;
+					margin: 2px 0px;
+					min-height: 0px;
+
+					rating {
+						padding: 0px !important;
+
+						.rating-icon {
+							height: auto;
+
+							&:last-child
+							{
+								padding-right: 0px;
+							}
+
+							ion-icon {
+								font-size: 0.9em !important;
+							}
+						}
+					}
+				}
+			}
+
+			.contact-description
+			{
+				margin: 8px 0px 0px;
+				color: $white-d;
+			}
+		}
+
+		.button-bar
+		{
+			@include display(flex);
+			margin: 6px 0px;
+
+			& > .button
+			{
+				@include segment-text-styles(color($colors, button-alt, base));
+				background-color: color($colors, button-alt, contrast);
+				margin: 0px;
+				border-radius: 0px;
+				@include flex(1);
+
+				&::after
+				{
+					content: '';
+					background-color: $white-c;
+					width: 2px;
+					@include calc(height, "100% - 20px");
+					margin: 10px 0px;
+					position: absolute;
+					top: 0px;
+					right: 0px;
+					opacity: 0.6;
+				}
+
+				&:last-child
+				{
+					&::after
+					{
+						content: initial;
+					}
+				}
+
+				ion-icon {
+					font-size: 2.2em;
+				}
+			}
+		}
+
+		.details-list
+		{
+			margin: 0px 16px 24px;
+
+			ion-item {
+				background: transparent;
+				padding: 0px;
+				border: none !important;
+
+				ion-avatar {
+					margin: 5px 10px 5px 0px;
+					min-width: 0px;
+					min-height: 0px;
+					width: 10%;
+					text-align: center;
+
+					ion-icon {
+						font-size: 1.8em;
+						color: $white-d;
+					}
+				}
+
+				.item-inner
+				{
+					padding: 22px 0px;
+					border-bottom: 0.55px solid rgba($white-d, .6) !important;
+
+					ion-label {
+						margin: 0px;
+						overflow: visible;
+						white-space: normal;
+					}
+				}
+			}
+
+			.detail-item
+			{
+				.detail-text
+				{
+					color: $white-d;
+					font-size: 1.4rem;
+					display: block;
+					margin-left: 8px;
+				}
+			}
+		}
+
+
+	}
+}

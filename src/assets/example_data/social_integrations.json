@@ -1,0 +1,19 @@
+{
+  "friends": [
+    "./assets/images/profile/200x200suarez.png",
+    "./assets/images/profile/200x200nadal.png",
+    "./assets/images/profile/200x200manny.png",
+    "./assets/images/profile/200x200serena.png",
+    "./assets/images/profile/200x200jordan.png"
+  ],
+  "photos": [
+    "./assets/images/listing/300x300AirSports.png",
+    "./assets/images/listing/300x300WaterSports.png",
+    "./assets/images/listing/300x300BeachSports.png",
+    "./assets/images/listing/300x300ExtremeSports.png",
+    "./assets/images/listing/300x300AthleticSports.png",
+    "./assets/images/listing/300x300CombatSports.png",
+    "./assets/images/listing/300x300WaterSports.png",
+    "./assets/images/listing/300x300ExtremeSports.png"
+  ]
+}

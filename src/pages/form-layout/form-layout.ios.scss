@@ -1,0 +1,15 @@
+ion-app.ios {
+	form-layout-page {
+		.forms-examples-segment
+		{
+			@include segment-button-ios-styles();
+		}
+	}
+
+	ion-alert.category-prompt {
+		.alert-wrapper
+		{
+			border-radius: 18px;
+		}
+	}
+}
